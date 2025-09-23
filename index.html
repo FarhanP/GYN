@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GYN</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="gyn.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gyn-wrapper">
+        <h1 class="gyn-title">G. Y. N.</h1>
+        <div class="gym-box-wrapper">
+          <div class="gyn-boxes">
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+            <div class="gyn-box"><span>?</span></div>
+          </div>
+          <div class="gyn-lock-your-number">
+            <button class="gyn-lock-btn">
+              Click here to lock your guessing number
+            </button>
+          </div>
+        </div>
+        <!-- Lock the guessing number dialogue -->
+        <dialog class="gyn-dialog">
+          <div class="gyn-input">
+            <span>Guess your next number:</span>
+            <input
+              class="gyn-number"
+              name="number"
+              type="number"
+              aria-label="number"
+            />
+            <button role="button" class="gyn-lock" type="button">Lock</button>
+          </div>
+        </dialog>
+        <dialog class="gyn-dialog gyn-dialog-win">
+          <div class="gyn-winner">
+            <h1>Congratulations!</h1>
+            <span>You have guessed it correctly.</span>
+            <button role="button" class="gyn-continue" type="button">
+              Continue
+              <i class="fa fa-circle" aria-hidden="true"></i>
+            </button>
+            <button role="button" class="gyn-reset" type="button">Reset</button>
+          </div>
+        </dialog>
+        <div class="gyn-results">
+          <div class="gyn-highest-streak">Highest Streak: <span>0</span></div>
+          <div class="gyn-highest-score">Highest Score:<span>0</span></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </body>
+</html>

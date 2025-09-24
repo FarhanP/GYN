@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GYN</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <script src="gyn.js" defer></script>
   </head>
   <body>
@@ -32,33 +38,57 @@
         <!-- Lock the guessing number dialogue -->
         <dialog class="gyn-dialog">
           <div class="gyn-input">
-            <span>Guess your next number:</span>
+            <span>Guess your next number: 1 - 9</span>
             <input
               class="gyn-number"
               name="number"
               type="number"
+              min="1"
+              max="9"
+              required
               aria-label="number"
             />
             <button role="button" class="gyn-lock" type="button">Lock</button>
           </div>
         </dialog>
+
+        <!-- Winner Dialog -->
         <dialog class="gyn-dialog gyn-dialog-win">
           <div class="gyn-winner">
             <h1>Congratulations!</h1>
+            <i class="fas fa-trophy" style="color: gold; font-size: 80px"></i>
             <span>You have guessed it correctly.</span>
             <button role="button" class="gyn-continue" type="button">
               Continue
-              <i class="fa fa-circle" aria-hidden="true"></i>
             </button>
             <button role="button" class="gyn-reset" type="button">Reset</button>
           </div>
         </dialog>
+
+        <!-- Failed Dialog -->
+        <dialog class="gyn-dialog gyn-dialog-lose">
+          <div class="gyn-loser">
+            <h1>You have lost!</h1>
+            <i
+              class="fas fa-thumbs-down"
+              style="color: #ff4545; font-size: 80px"
+            ></i>
+
+            <button role="button" class="gyn-try-again" type="button">
+              Try Again
+            </button>
+          </div>
+        </dialog>
         <div class="gyn-results">
           <div class="gyn-highest-streak">Highest Streak: <span>0</span></div>
-          <div class="gyn-highest-score">Highest Score:<span>0</span></div>
+          <div class="gyn-attempts-score">Attempts: <span>3</span></div>
         </div>
       </div>
     </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   </body>
 </html>

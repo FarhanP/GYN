@@ -70,20 +70,21 @@ dialog::backdrop {
   text-align: center;
   width: 100%;
   gap: 20px;
-}
-
-.gyn-winner {
   h1 {
     font-family: "Press Start 2P", system-ui;
     font-size: 20px;
   }
+}
+
+.gyn-winner {
   span {
     font-size: 16px;
   }
 }
-
-/* .gyn-loser {
-  color: #ff4545;
+/* 
+.gyn-loser {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 20px;
 } */
 
 .gyn-lock-your-number {

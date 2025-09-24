@@ -264,7 +264,7 @@ button {
 
   .gyn-input {
     span {
-      font-size: 10px;
+      font-size: 14px;
     }
   }
 
@@ -292,6 +292,10 @@ button {
   }
   .gyn-try-again {
     font-size: 14px;
+  }
+
+  dialog {
+    max-width: 80%;
   }
 }
 

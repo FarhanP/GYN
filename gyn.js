@@ -72,6 +72,10 @@ gynNumber.addEventListener("input", () => {
   }
 });
 
+gynNumber.addEventListener("change", () => {
+  gynNumber.nextElementSibling.removeAttribute("disabled");
+});
+
 // Open the popup for guessing the number
 dialogBtn.addEventListener("click", () => {
   dialog.showModal();

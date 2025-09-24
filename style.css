@@ -13,6 +13,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100svh;
+  font-family: "Press Start 2P", system-ui;
+  line-height: 1.5;
+}
+
+button {
+  font-family: "Press Start 2P", system-ui;
+  line-height: 1.8;
 }
 
 .container {
@@ -71,12 +78,14 @@ dialog::backdrop {
   width: 100%;
   gap: 20px;
   h1 {
-    font-family: "Press Start 2P", system-ui;
     font-size: 20px;
   }
 }
 
 .gyn-winner {
+  h1 {
+    color: #5cb85c;
+  }
   span {
     font-size: 16px;
   }
@@ -105,7 +114,6 @@ dialog::backdrop {
 
 .gyn-title {
   text-align: center;
-  font-family: "Press Start 2P", system-ui;
   font-size: 36px;
   margin-bottom: 40px;
 }
@@ -132,7 +140,6 @@ dialog::backdrop {
   font-weight: bold;
   cursor: pointer;
   transform-style: preserve-3d;
-  font-family: "Press Start 2P", system-ui;
 
   span {
     visibility: hidden;
@@ -164,11 +171,20 @@ dialog::backdrop {
   gap: 10px;
 }
 
+.gyn-try-again {
+  font-size: 16px;
+}
+
 .gyn-highest-streak {
   span {
     font-weight: bold;
     color: #5cb85c;
   }
+}
+
+.gyn-highest-streak,
+.gyn-attempts-score {
+  font-size: 20px;
 }
 
 .gyn-input {
@@ -185,6 +201,7 @@ dialog::backdrop {
     height: 32px;
     font-size: 24px;
     padding: 12px;
+    font-family: "Press Start 2P", system-ui;
   }
 }
 
@@ -228,7 +245,7 @@ button {
   .gyn-title {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .gyn-boxes {
@@ -245,6 +262,12 @@ button {
     font-size: 32px;
   }
 
+  .gyn-input {
+    span {
+      font-size: 10px;
+    }
+  }
+
   .gyn-results {
     flex-direction: column;
     font-size: 28px;
@@ -255,6 +278,7 @@ button {
   .gyn-highest-streak {
     text-align: center;
     padding: 14px;
+    font-size: 16px;
     border-radius: 4px;
   }
 
@@ -265,6 +289,9 @@ button {
   }
   .gyn-attempts-score {
     background-color: #e34c4c;
+  }
+  .gyn-try-again {
+    font-size: 14px;
   }
 }
 

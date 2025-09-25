@@ -301,9 +301,10 @@ button {
 
   .gyn-lock-wrapper {
     gap: 24px;
-    input {
-      width: 50%;
-    }
+  }
+
+  .gyn-lock-wrapper input {
+    width: 50%;
   }
 
   dialog {

@@ -39,15 +39,17 @@
         <dialog class="gyn-dialog">
           <div class="gyn-input">
             <span>Guess your next number: 1 - 9</span>
-            <input
-              class="gyn-number"
-              name="number"
-              type="number"
-              aria-label="number"
-            />
-            <button role="button" disabled class="gyn-lock" type="button">
-              Lock
-            </button>
+            <div class="gyn-lock-wrapper">
+              <input
+                class="gyn-number"
+                name="number"
+                type="number"
+                aria-label="number"
+              />
+              <button role="button" disabled class="gyn-lock" type="button">
+                Lock
+              </button>
+            </div>
           </div>
         </dialog>
 

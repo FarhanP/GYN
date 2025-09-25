@@ -187,6 +187,11 @@ dialog::backdrop {
   font-size: 20px;
 }
 
+.gyn-lock-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
 .gyn-input {
   background: #ffffff;
   color: #333;
@@ -292,6 +297,13 @@ button {
   }
   .gyn-try-again {
     font-size: 14px;
+  }
+
+  .gyn-lock-wrapper {
+    gap: 24px;
+    input {
+      width: 50%;
+    }
   }
 
   dialog {

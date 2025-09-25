@@ -300,13 +300,12 @@ button {
   }
 
   .gyn-lock-wrapper {
+    display: flex;
     gap: 24px;
   }
 
-  .gyn-lock-wrapper {
-    .gyn-number {
-      width: 50%;
-    }
+  .gyn-number {
+    width: 50%;
   }
 
   dialog {

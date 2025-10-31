@@ -317,7 +317,14 @@ button {
 
 @media screen and (max-width: 400px) {
   .gyn-box {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 70px;
+  }
+
+  .gyn-boxes {
+    gap: 16px;
+  }
+
+  .gyn-lock-your-number {
   }
 }

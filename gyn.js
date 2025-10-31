@@ -16,20 +16,24 @@ const tryAgain = document.querySelector(".gyn-try-again");
 const min = 1;
 const max = 9;
 
-let numbers = [];
+function getRandomNumber() {
+  let numbers = [];
 
-for (let i = min; i <= max; i++) {
-  numbers.push(i);
+  for (let i = min; i <= max; i++) {
+    numbers.push(i);
+  }
+
+  for (let i = 7; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+  }
+
+  boxes.forEach((box, i) => {
+    box.textContent = numbers[i];
+  });
 }
 
-for (let i = 7; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
-  [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
-}
-
-boxes.forEach((box, i) => {
-  box.textContent = numbers[i];
-});
+getRandomNumber();
 
 boxContainer.addEventListener("click", (e) => {
   const box = e.target.closest(".gyn-box");
@@ -92,6 +96,7 @@ lockBtn.addEventListener("click", () => {
 // Reset/Continue the game
 [resetGame, continueGame, tryAgain].forEach((btn) => {
   btn.addEventListener("click", () => resetGameState(btn));
+  getRandomNumber();
 });
 
 function resetGameState(btn) {
@@ -109,4 +114,5 @@ function resetGameState(btn) {
   dialogBtn.classList.remove("hidden");
   gynNumber.value = "";
   attempts.textContent = 3;
+  getRandomNumber();
 }
